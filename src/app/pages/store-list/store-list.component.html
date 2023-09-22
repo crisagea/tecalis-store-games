@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="page-header">
+    <div class="container align-items-center">
+      <div class="row">
+        <app-store-card *ngFor="let store of storeList" class="col-lg-4 col-md-6 mt-5 mb-5" [store]="store"
+          (navStoreDetail)="navToStoreDetail($event)" (navStoreWeb)="navToStoreWeb($event)"></app-store-card>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="title"><span> TECALIS • </span> Proyecto Game Store </p>
+        </div>
+        <div class="col">
+          <p class="title d-flex justify-content-end">© 2023. Cristina Agea Mielgo</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

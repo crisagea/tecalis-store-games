@@ -1,0 +1,28 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body game">
+            <div class="col-12">
+                <carousel [showIndicators]="false">
+                    <slide *ngFor="let image of imagesList">
+                        <img class="d-block w-100" [src]="image" />
+                    </slide>
+                </carousel>
+            </div>
+            <h2 class="col-10 game__title mb-1">{{gameSelected?.name}}</h2>
+            <div class="col-12">
+                <div class="progress-container progress-warning">
+                    <progressbar class="progress-bar-warning" [value]="calculatePercentage()">
+                        <span class="progress-value"> {{gameSelected?.rating | number : '1.1-1'}} /
+                            {{gameSelected?.rating_top}}</span>
+                    </progressbar>
+                </div>
+            </div>
+            <div class="col-12 game__description" [innerHTML]="gameSelected?.description"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="gameModal.hide()">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+@import "../../../assets/scss/blk-design-system.scss";
+
+.modal-dialog {
+  transform: translate(0, 10%) !important;
+}
+
+.game{
+  &__title {
+    color: $gray-700;
+  }
+
+  &__description {
+    height: 150px;
+    overflow-y: scroll;
+    padding: 12px;
+    border: 1px solid $gray-400;
+  }
+
+  .progress-value {
+    top: -40px;
+    font-size: 20px;
+    color: $danger;
+  }
+}
